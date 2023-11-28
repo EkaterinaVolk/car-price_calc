@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Калькулятор</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="#" class="form" name="form">
+        <h2 class="heading">Марка</h2>
+        <div class="form__item form__item-brand">
+          <select id="brand" name="brand" class="select" required>
+            <option value="Audi">Audi</option>
+            <option value="BMW">BMW</option>
+            <option value="Ford">Ford</option>
+            <option value="Tesla" selected>Tesla</option>
+          </select>
+          <select id="Tesla__model" name="Tesla__model" class="select model">
+            <option value="S">Model S</option>
+            <option value="Y">Model Y</option>
+            <option value="X">Xodel X</option>
+          </select>
+          <select id="Audi__model" name="Audi__model" class="select model">
+            <option value="A3">A3</option>
+            <option value="Q5">Q5</option>
+            <option value="A7">A7</option>
+          </select>
+          <select id="BMW__model" name="BMW__model" class="select model">
+            <option value="X1">X1</option>
+            <option value="series5">Series 5</option>
+            <option value="X6">X6</option>
+          </select>
+          <select id="Ford__model" name="Ford__model" class="select model">
+            <option value="Explorer">Explorer</option>
+            <option value="Mondeo">Mondeo</option>
+            <option value="Aerostar">Aerostar</option>
+          </select>
+        </div>
+        <div class="form__item">
+          <h2 class="heading">Тип топлива</h2>
+          <ul class="switcher">
+            <li class="switcher__item">
+              <input
+                type="radio"
+                name="fuel"
+                id="gasoline"
+                class="fuel"
+                value="gasoline"
+              />
+              <label for="gasoline">Бензин</label>
+            </li>
+            <li class="switcher__item">
+              <input
+                type="radio"
+                name="fuel"
+                id="diesel"
+                class="fuel"
+                value="diesel"
+                checked="checked"
+              />
+              <label for="diesel">Дизель</label>
+            </li>
+            <li class="switcher__item">
+              <input
+                type="radio"
+                name="fuel"
+                id="gas"
+                class="fuel"
+                value="gas"
+              />
+              <label for="gas">Газ</label>
+            </li>
+            <li class="switcher__item">
+              <input
+                type="radio"
+                name="fuel"
+                id="electricity"
+                class="fuel"
+                value="electricity"
+              />
+              <label for="electricity">Электричество</label>
+            </li>
+          </ul>
+        </div>
+        <div class="form__item">
+          <h2 class="heading">Объём двигателя (от 1,1 до 3,5 литров)</h2>
+          <input
+            type="number"
+            id="capacity"
+            name="capacity"
+            class="capacity__input"
+            required
+            value="2.4"
+            min="1.1"
+            max="3.5"
+            step="0.1"
+          />
+        </div>
+        <div class="form__item">
+          <h2 class="heading">Состояние</h2>
+          <ul class="switcher">
+            <li class="switcher__item-condition">
+              <input
+                type="radio"
+                name="condition"
+                id="new"
+                class="condition"
+                value="new"
+                checked="checked"
+              />
+              <label for="new">Новый</label>
+            </li>
+            <li class="switcher__item-condition">
+              <input
+                type="radio"
+                name="condition "
+                id="used"
+                class="condition"
+                value="used"
+              />
+              <label for="used">Подержанный</label>
+            </li>
+            <li class="switcher__item-condition">
+              <select
+                id="used__select"
+                name="used__select"
+                class="select"
+                required
+              >
+                <option value="used__select1">1 или 2 владельца</option>
+                <option value="used__select2">Более 3 владельцев</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <div class="form__item">
+          <h2 class="heading">Способ оплаты</h2>
+          <ul class="switcher">
+            <li class="switcher__item">
+              <input
+                type="radio"
+                name="paymentMethod"
+                id="cash"
+                class="payment-method"
+                value="cash"
+              />
+              <label for="cash">Наличными</label>
+            </li>
+            <li class="switcher__item">
+              <input
+                type="radio"
+                name="paymentMethod"
+                id="card"
+                class="payment-method"
+                value="card"
+                checked="checked"
+              />
+              <label for="card">Картой</label>
+            </li>
+            <li class="switcher__item">
+              <input
+                type="radio"
+                name="paymentMethod"
+                id="company"
+                class="payment-method"
+                value="company"
+              />
+              <label for="company">Счет</label>
+            </li>
+          </ul>
+        </div>
+        <div class="form__item form__total">
+          <h2 class="heading">Итоговая стоимость</h2>
+          <output class="total" id="total">0</output>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: gray solid 1px; */
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  width: 100%;
+  min-height: 100vh;
+  color: #fff;
+  position: relative;
+  background-image: url(./images/bg.jpg);
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  width: 500px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 0px 15px 10px 15px;
+  color: #111;
+}
+
+.form .heading {
+  margin-bottom: 5px;
+  margin-top: 15px;
+  padding: 3px;
+  font-size: 16px;
+  color: #222223;
+  background-color: rgb(85, 122, 149, 0.25);
+  border-radius: 7px;
+}
+
+.switcher {
+  display: flex;
+  gap: 15px;
+}
+.switcher__item {
+  list-style-type: none;
+}
+
+.switcher__item-condition {
+  margin-left: 24px;
+  list-style-type: none;
+  min-height: 40px;
+}
+
+.switcher__item-condition label {
+  padding: 7px;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.switcher__item input {
+  visibility: hidden;
+}
+
+.switcher__item label {
+  display: inline-block;
+  padding: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #39393b;
+  border: 2px solid #557a95;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.switcher__item label:hover {
+  background-color: rgb(85, 122, 149, 0.15);
+}
+
+.switcher__item input:checked + label {
+  background-color: #557a95;
+  color: #fff;
+}
+
+.form__item-brand {
+  display: flex;
+}
+
+.select {
+  margin-left: 18px;
+  padding: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  border: 2px solid #557a95;
+  cursor: pointer;
+  border-radius: 7px;
+  background-color: #557a95;
+}
+
+#used__select {
+  display: none;
+}
+
+.capacity__input {
+  padding-left: 5px;
+  margin-left: 18px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid #557a95;
+  border-radius: 7px;
+}
+
+.model {
+  margin-left: 10px;
+  display: none;
+}
+
+.model__display {
+  margin-left: 10px;
+  display: block;
+}
+
+.form__total {
+  display: flex;
+  flex-direction: column;
+}
+.form .total {
+  align-self: flex-end;
+  margin-right: 70px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #39393b;
+}
+
+.form .total::after {
+  content: "\20BD";
+  margin-left: 5px;
+}
